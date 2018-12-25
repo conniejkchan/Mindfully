@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mindfully(Food Journal)</title>
+        <link rel="stylesheet" type="text/css"  href="/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="/css/foundation.css">
+        <link rel="stylesheet" type="text/css" href="/css/app.css">
+        
+    </head>
+    <body>
+        <div class="top-bar">
+            <div class="top-bar-left">
+                <ul class="dropdown menu">
+                    <li class="menu-text">
+                        Mindfully
+                    </li>
+                        {{#if user}}
+				                <li><a href="/">HOME</a></li> 
+                                <li><a href="/add">ADD</a></li> 
+                                <li><a href="/filter">FILTER</a></li> 
+                                <li><a href="/goals-difficulty">GOALS DIFFICULTY</a></li> 
+                                <li>LOGGED IN AS: {{user.username}}</li> 
+                                <li><a href="/logout">LOGOUT</a></li> 
+			            {{else}}
+                                <li><a href="/">HOME</a></li> 
+                                <li><a href="/login">LOGIN</a></li> 
+                                <li><a href="/register">REGISTER</a></li> 
+			            {{/if}}	
+                </ul>
+            </div>
+        </div>
+        <br>
+        <div id="content">
+            {{{body}}}
+        </div>
+         <div id="footer">
+            
+        </div>
+    </body>
+</html>

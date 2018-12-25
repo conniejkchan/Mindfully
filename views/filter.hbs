@@ -1,0 +1,45 @@
+{{#if filtered}}
+<form method="GET" action="filter" >
+	<div class="grid-container">
+		<div class="grid-y grid-padding-x">
+			<fieldset class="large-5 cell">
+   		 		<legend>Filter Meals:</legend>
+    			<input type="radio" name="filter" value="healthy" id="mealHealthy" required><label for="mealHealthy">Healthy</label>
+    			<input type="radio" name="filter" value="treat" id="mealTreat"><label for="mealTreat">Treat</label>
+ 			</fieldset>
+			<div class="medium-6 cell">
+				<input type="submit" value="Filter"/>
+			</div>
+		</div>
+	</div>
+</form>
+<ul>
+     {{#each filtered}}
+        <li>{{this.week}} </li>
+        Date: {{this.date}} <br>
+        Breakfast: {{this.breakfast}} <br>
+        Lunch: {{this.lunch}}<br>
+        Dinner: {{this.dinner}}<br>
+        Snack: {{this.snack}}<br>
+        Goals: {{this.goals}}<br>
+		Filter: {{this.filter}}
+    {{/each}}
+
+</ul>
+{{else}}
+<form method="GET" action="filter" >
+	<div class="grid-container">
+		<div class="grid-y grid-padding-x">
+			<fieldset class="large-5 cell">
+   		 		<legend>Filter Meals:</legend>
+    			<input type="radio" name="filter" value="healthy" id="mealHealthy" required><label for="mealHealthy">Healthy</label>
+    			<input type="radio" name="filter" value="treat" id="mealTreat"><label for="mealTreat">Treat</label>
+ 			</fieldset>
+			<div class="medium-6 cell">
+				<input type="submit" value="Filter"/>
+			</div>
+		</div>
+	</div>
+</form>
+{{/if}}	
+

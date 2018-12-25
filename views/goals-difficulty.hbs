@@ -1,0 +1,42 @@
+{{#if difficulties}}
+<form method="GET" action="goals-difficulty" >
+	<div class="grid-container">
+		<div class="grid-y grid-padding-x">
+			<fieldset class="medium-6 cell">
+   		 		<legend>Goal Difficulty:</legend>
+    			<input type="radio" name="difficulty" value="easy" id="goalEasy" required><label for="goalEasy">Easy</label>
+    			<input type="radio" name="difficulty" value="medium" id="goalMedium"><label for="goalMedium">Medium</label>
+				<input type="radio" name="difficulty" value="hard" id="goalHard"><label for="goalHard">Hard</label>
+ 			</fieldset>
+			<div class="medium-6 cell">
+				<input type="submit" value="Filter Difficulty"/>
+			</div>
+		</div>
+	</div>
+</form>
+<ul>
+     {{#each difficulties}}
+        <li>{{this.date}} </li>
+        Goals: {{this.goals}}<br>
+		Difficulty: {{this.difficulty}}
+    {{/each}}
+
+</ul>
+{{else}}
+<form method="GET" action="goals-difficulty" >
+	<div class="grid-container">
+		<div class="grid-y grid-padding-x">
+			<fieldset class="medium-6 cell">
+   		 		<legend>Goal Difficulty:</legend>
+    			<input type="radio" name="difficulty" value="easy" id="goalEasy" required><label for="goalEasy">Easy</label>
+    			<input type="radio" name="difficulty" value="medium" id="goalMedium"><label for="goalMedium">Medium</label>
+				<input type="radio" name="difficulty" value="hard" id="goalHard"><label for="goalHard">Hard</label>
+ 			</fieldset>
+			<div class="medium-6 cell">
+				<input type="submit" value="Filter Difficulty"/>
+			</div>
+		</div>
+	</div>
+</form>
+{{/if}}	
+

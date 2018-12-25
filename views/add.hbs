@@ -1,0 +1,54 @@
+<h3>Add Meals</h3>
+{{#if message}}
+<div class="error">{{ message }}</div>
+{{/if}}
+
+<form method="POST" action="add">
+	<div class="grid-container">
+		<div class="grid-y grid-padding-x">
+			<div class="medium-6 cell">
+				<label for="week">Week(Please start from Monday):</label>
+				<input type="text" name="week" value="">
+			</div>
+			<div class="medium-6 cell">
+				<label for="date">Date(Dates from Monday to Sunday):</label>
+				<input type="text" name="date" value="">
+			</div>
+			<div class="medium-6 cell">
+				<label for="breakfast">Breakfast:</label> 
+				<input type="text" name="breakfast" value="">
+			</div>
+    		<div class="medium-6 cell">
+				<label for="lunch">Lunch:</label> 
+				<input type="text" name="lunch" value="">
+			</div>
+    		<div class="medium-6 cell">
+				<label for="dinner">Dinner:</label> 
+				<input type="text" name="dinner" value="">
+			</div>
+    		<div class="medium-6 cell">
+				<label for="snack">Snack:</label> 
+			<input type="text" name="snack" value="">
+			</div>
+    		<!-- add checkboxes for goals -->
+    		<div class="medium-6 cell">
+				<label for="goals">Goals:</label> 
+				<input type="text" name="goals" value="">
+			</div>
+			<fieldset class="medium-6 cell">
+   		 		<legend>Goal Difficulty:</legend>
+    			<input type="radio" name="difficulty" value="easy" id="goalEasy" required><label for="goalEasy">Easy</label>
+    			<input type="radio" name="difficulty" value="medium" id="goalMedium"><label for="goalMedium">Medium</label>
+				<input type="radio" name="difficulty" value="hard" id="goalHard"><label for="goalHard">Hard</label>
+ 			</fieldset>
+			<fieldset class="medium-6 cell">
+   		 		<legend>Filter Meals:</legend>
+    			<input type="radio" name="filter" value="healthy" id="mealHealthy" required><label for="mealHealthy">Healthy</label>
+    			<input type="radio" name="filter" value="treat" id="mealTreat"><label for="mealTreat">Treat</label>
+ 			</fieldset>
+			<div class="medium-6 cell">
+				<input type="submit" value="Submit">
+			</div>
+		</div>
+	</div>
+</form>

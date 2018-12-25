@@ -1,0 +1,7 @@
+<h2>Mindfully Homepage</h2>
+<h3>Weeks:</h3>
+<ul>
+        {{#each allWeeks}}
+            <li><a href="/week/{{this.slug}}">{{this.week}}</a></li>
+        {{/each}}
+</ul>
